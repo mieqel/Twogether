@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: system-ui, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.app {
+  height: 100dvh;          /* dvh = dynamic viewport, plays nice with mobile browser bars */
+  padding-bottom: 60px;    /* room for the nav */
+}
+
+.screen {
+  display: none;
+  height: 100%;
+}
+
+.screen--active {
+  display: block;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+.nav-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.nav-btn--active {
+  color: #fff;
+}
