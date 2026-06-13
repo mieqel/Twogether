@@ -108,3 +108,39 @@ html, body {
   height: 64px;
   cursor: pointer;
 }
+
+/* ── Heart burst ─────────────────────── */
+.burst-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 6rem;
+  pointer-events: none;            /* taps pass through it */
+  animation: burst 0.6s ease-out forwards;
+}
+
+@keyframes burst {
+  0%   { transform: translate(-50%, -50%) scale(0);   opacity: 0; }
+  30%  { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+
+/* ── Toast ───────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.toast--show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
